@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33424.131
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "INVEOS", "INVEOS\INVEOS.csproj", "{3A22BC42-E558-4FB2-931C-F52A14F72B60}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InveosModel", "InveosModel\InveosModel.csproj", "{08AD707C-48B2-4C21-898F-102FB35C0543}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "INVEOSAPI", "INVEOSAPI\INVEOSAPI.csproj", "{7F38733E-1522-4B54-98D4-9DF6D00AA490}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3A22BC42-E558-4FB2-931C-F52A14F72B60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A22BC42-E558-4FB2-931C-F52A14F72B60}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A22BC42-E558-4FB2-931C-F52A14F72B60}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A22BC42-E558-4FB2-931C-F52A14F72B60}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08AD707C-48B2-4C21-898F-102FB35C0543}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08AD707C-48B2-4C21-898F-102FB35C0543}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08AD707C-48B2-4C21-898F-102FB35C0543}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08AD707C-48B2-4C21-898F-102FB35C0543}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F38733E-1522-4B54-98D4-9DF6D00AA490}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F38733E-1522-4B54-98D4-9DF6D00AA490}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F38733E-1522-4B54-98D4-9DF6D00AA490}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F38733E-1522-4B54-98D4-9DF6D00AA490}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {17755860-13DA-41F7-8B5E-FC9B093957B9}
+	EndGlobalSection
+EndGlobal

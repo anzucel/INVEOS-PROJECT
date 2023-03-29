@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "eytPbPnTRaSvHcMcz6LFCC5ZWoUqSHS7zlBBUXJb2L/CO256Q9ZTye3hAMaEe4C3jUL/hZp0bR4gM1e3fgsCCg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\USUARIO\\source\\repos\\INVEOS\\InveosModel\\InveosModel.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\USUARIO\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.15\\microsoft.windowsdesktop.app.ref.6.0.15.nupkg.sha512",
+    "C:\\Users\\USUARIO\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.15\\microsoft.netcore.app.ref.6.0.15.nupkg.sha512",
+    "C:\\Users\\USUARIO\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.15\\microsoft.aspnetcore.app.ref.6.0.15.nupkg.sha512"
+  ],
+  "logs": []
+}

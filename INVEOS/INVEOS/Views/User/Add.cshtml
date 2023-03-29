@@ -1,0 +1,156 @@
+﻿@model INVEOS.Models.User
+
+     <div class="content-page">
+     <div class="container-fluid add-form-list">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card">
+                    <div class="card-header d-flex justify-content-between">
+                        <div class="header-title">
+                            <h4 class="card-title">Agregar Usuario</h4>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <form asp-action="Add" data-toggle="validator">
+                            <div class="row"> 
+                                <div class="col-md-6">                      
+                                    <div class="form-group">
+                                        <label>Primer Nombre *</label>
+                                        <input asp-for="Employee.FirstName" class="form-control" placeholder="Ingrese Primer Nombre" required>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Segundo Nombre</label>
+                                        <input asp-for="Employee.SecondName" class="form-control" placeholder="Ingrese Segundo Nombre">
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">                      
+                                    <div class="form-group">
+                                        <label>Primer Apellido *</label>
+                                        <input asp-for="Employee.FirstLastname" class="form-control" placeholder="Ingrese Primer Apellido" required>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Segundo Apellido *</label>
+                                        <input asp-for="Employee.SecondLastname" class="form-control" placeholder="Ingrese Segundo Apellido" required>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Teléfono *</label>
+                                        <input asp-for="Employee.Phone" type="number" class="form-control" placeholder="Ingrese Número de Teléfono" required>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div> 
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Correo *</label>
+                                        <input asp-for="Employee.Email" class="form-control" placeholder="Ingrese Correo" required>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div> 
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Género *</label>
+                                        <select asp-for="Employee.Gender" class="selectpicker form-control" data-style="py-0">
+                                            <option>Masculino</option>
+                                            <option>Femenino</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Departamento *</label>
+                                        <select asp-for="Employee.AddressNavigation.Department" class="selectpicker form-control" data-style="py-0">
+                                            <option>Guatemala</option>
+                                            <option>Sacátepequez</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Municipio *</label>
+                                        <select asp-for="Employee.AddressNavigation.Municipality" class="selectpicker form-control" data-style="py-0">
+                                            <option>Ciudad de Guatemala</option>
+                                            <option>Villa Nueva</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Zona *</label>
+                                        <input asp-for="Employee.AddressNavigation.Zone" type="number" class="form-control" placeholder="Ingrese Zona de Domicilio" required>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Dirección *</label>
+                                        <input asp-for="Employee.AddressNavigation.AddressDetail" class="form-control" placeholder="Ingrese Detalle Dirección" required>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">                      
+                                    <div class="form-group">
+                                        <label>Usuario *</label>
+                                        <input asp-for="Username" class="form-control" placeholder="Ingrese Nombre de Usuario" required>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">                      
+                                    <div class="form-group">
+                                        <label>Contraseña *</label>
+                                        <input asp-for="Password" class="form-control" name="password" id="password" placeholder="Ingrese Contraseña" required>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>  
+                                <div class="col-md-6">                      
+                                    <div class="form-group">
+                                        <label>Confirmar Contraseña *</label>
+                                        <input type="text" class="form-control" name="passConfirm" id="passConfirm" placeholder="Ingrese Confirmación de Contraseña" required>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div> 
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Estado *</label>
+                                        <select asp-for="Status" class="selectpicker form-control" data-style="py-0">
+                                            <option>Activo</option>
+                                            <option>Inactivo</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Rol *</label>
+                                        <select asp-for="Employee.Role" class="selectpicker form-control" data-style="py-0">
+                                            <option>Vendedor</option>
+                                            <option>Administrador</option>
+                                            <option>Análista</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                @*<div class="col-md-12">
+                                    <div class="checkbox d-inline-block mb-3">
+                                        <input type="checkbox" class="checkbox-input mr-2" id="checkbox1" checked="">
+                                        <label for="checkbox1">Notify User by Email</label>
+                                    </div>
+                                </div>*@                               
+                            </div>                            
+                            <input type="submit" class="btn btn-primary mr-2" value="Agregar"/>
+                            <button type="reset" class="btn btn-danger">Restablecer</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Page end  -->
+    </div>
+</div>
+

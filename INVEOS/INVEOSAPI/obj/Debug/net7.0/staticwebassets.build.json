@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "61q+kIxLnQndyGHXvExCVEsjyDaZYyIx9V5N8SEW0pM=",
+  "Source": "INVEOSAPI",
+  "BasePath": "_content/INVEOSAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

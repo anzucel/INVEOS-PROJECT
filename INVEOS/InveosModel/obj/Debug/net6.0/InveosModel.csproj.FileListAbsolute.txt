@@ -1,0 +1,36 @@
+D:\OneDrive - Universidad Rafael Landivar\PRIMER CICLO 2023\PROGRAMACIÓN WEB\INVEOS\InveosModel\bin\Debug\net6.0\InveosModel.deps.json
+D:\OneDrive - Universidad Rafael Landivar\PRIMER CICLO 2023\PROGRAMACIÓN WEB\INVEOS\InveosModel\bin\Debug\net6.0\InveosModel.dll
+D:\OneDrive - Universidad Rafael Landivar\PRIMER CICLO 2023\PROGRAMACIÓN WEB\INVEOS\InveosModel\bin\Debug\net6.0\InveosModel.pdb
+D:\OneDrive - Universidad Rafael Landivar\PRIMER CICLO 2023\PROGRAMACIÓN WEB\INVEOS\InveosModel\obj\Debug\net6.0\InveosModel.csproj.AssemblyReference.cache
+D:\OneDrive - Universidad Rafael Landivar\PRIMER CICLO 2023\PROGRAMACIÓN WEB\INVEOS\InveosModel\obj\Debug\net6.0\InveosModel.GeneratedMSBuildEditorConfig.editorconfig
+D:\OneDrive - Universidad Rafael Landivar\PRIMER CICLO 2023\PROGRAMACIÓN WEB\INVEOS\InveosModel\obj\Debug\net6.0\InveosModel.AssemblyInfoInputs.cache
+D:\OneDrive - Universidad Rafael Landivar\PRIMER CICLO 2023\PROGRAMACIÓN WEB\INVEOS\InveosModel\obj\Debug\net6.0\InveosModel.AssemblyInfo.cs
+D:\OneDrive - Universidad Rafael Landivar\PRIMER CICLO 2023\PROGRAMACIÓN WEB\INVEOS\InveosModel\obj\Debug\net6.0\InveosModel.csproj.CoreCompileInputs.cache
+D:\OneDrive - Universidad Rafael Landivar\PRIMER CICLO 2023\PROGRAMACIÓN WEB\INVEOS\InveosModel\obj\Debug\net6.0\InveosModel.dll
+D:\OneDrive - Universidad Rafael Landivar\PRIMER CICLO 2023\PROGRAMACIÓN WEB\INVEOS\InveosModel\obj\Debug\net6.0\refint\InveosModel.dll
+D:\OneDrive - Universidad Rafael Landivar\PRIMER CICLO 2023\PROGRAMACIÓN WEB\INVEOS\InveosModel\obj\Debug\net6.0\InveosModel.pdb
+D:\OneDrive - Universidad Rafael Landivar\PRIMER CICLO 2023\PROGRAMACIÓN WEB\INVEOS\InveosModel\obj\Debug\net6.0\ref\InveosModel.dll
+C:\Users\USUARIO\source\repos\INVEOS\InveosModel\bin\Debug\net6.0\InveosModel.deps.json
+C:\Users\USUARIO\source\repos\INVEOS\InveosModel\bin\Debug\net6.0\InveosModel.dll
+C:\Users\USUARIO\source\repos\INVEOS\InveosModel\bin\Debug\net6.0\InveosModel.pdb
+C:\Users\USUARIO\source\repos\INVEOS\InveosModel\obj\Debug\net6.0\InveosModel.csproj.AssemblyReference.cache
+C:\Users\USUARIO\source\repos\INVEOS\InveosModel\obj\Debug\net6.0\InveosModel.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\USUARIO\source\repos\INVEOS\InveosModel\obj\Debug\net6.0\InveosModel.AssemblyInfoInputs.cache
+C:\Users\USUARIO\source\repos\INVEOS\InveosModel\obj\Debug\net6.0\InveosModel.AssemblyInfo.cs
+C:\Users\USUARIO\source\repos\INVEOS\InveosModel\obj\Debug\net6.0\InveosModel.csproj.CoreCompileInputs.cache
+C:\Users\USUARIO\source\repos\INVEOS\InveosModel\obj\Debug\net6.0\InveosModel.dll
+C:\Users\USUARIO\source\repos\INVEOS\InveosModel\obj\Debug\net6.0\refint\InveosModel.dll
+C:\Users\USUARIO\source\repos\INVEOS\InveosModel\obj\Debug\net6.0\InveosModel.pdb
+C:\Users\USUARIO\source\repos\INVEOS\InveosModel\obj\Debug\net6.0\ref\InveosModel.dll
+C:\Users\USUARIO\source\repos\INVEOS1\InveosModel\bin\Debug\net6.0\InveosModel.deps.json
+C:\Users\USUARIO\source\repos\INVEOS1\InveosModel\bin\Debug\net6.0\InveosModel.dll
+C:\Users\USUARIO\source\repos\INVEOS1\InveosModel\bin\Debug\net6.0\InveosModel.pdb
+C:\Users\USUARIO\source\repos\INVEOS1\InveosModel\obj\Debug\net6.0\InveosModel.csproj.AssemblyReference.cache
+C:\Users\USUARIO\source\repos\INVEOS1\InveosModel\obj\Debug\net6.0\InveosModel.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\USUARIO\source\repos\INVEOS1\InveosModel\obj\Debug\net6.0\InveosModel.AssemblyInfoInputs.cache
+C:\Users\USUARIO\source\repos\INVEOS1\InveosModel\obj\Debug\net6.0\InveosModel.AssemblyInfo.cs
+C:\Users\USUARIO\source\repos\INVEOS1\InveosModel\obj\Debug\net6.0\InveosModel.csproj.CoreCompileInputs.cache
+C:\Users\USUARIO\source\repos\INVEOS1\InveosModel\obj\Debug\net6.0\InveosModel.dll
+C:\Users\USUARIO\source\repos\INVEOS1\InveosModel\obj\Debug\net6.0\refint\InveosModel.dll
+C:\Users\USUARIO\source\repos\INVEOS1\InveosModel\obj\Debug\net6.0\InveosModel.pdb
+C:\Users\USUARIO\source\repos\INVEOS1\InveosModel\obj\Debug\net6.0\ref\InveosModel.dll
