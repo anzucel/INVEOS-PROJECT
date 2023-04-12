@@ -10,8 +10,9 @@ namespace INVEOS.Controllers
         }
 
         [HttpGet]
-        public ActionResult List()
+        public async Task<ActionResult> List()
         {
+            IEnumerable<Models.Supplier> suppliers = await Functions.APIService.GetList<Models.Supplier>("Supplier");
             return View();
         }
 

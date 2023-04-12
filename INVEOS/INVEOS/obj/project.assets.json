@@ -10962,11 +10962,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\USUARIO\\source\\repos\\INVEOS\\INVEOS\\INVEOS.csproj",
+      "projectUniqueName": "C:\\Users\\USUARIO\\source\\repos\\INVEOS-PROJECT\\INVEOS\\INVEOS\\INVEOS.csproj",
       "projectName": "INVEOS",
-      "projectPath": "C:\\Users\\USUARIO\\source\\repos\\INVEOS\\INVEOS\\INVEOS.csproj",
+      "projectPath": "C:\\Users\\USUARIO\\source\\repos\\INVEOS-PROJECT\\INVEOS\\INVEOS\\INVEOS.csproj",
       "packagesPath": "C:\\Users\\USUARIO\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\USUARIO\\source\\repos\\INVEOS\\INVEOS\\obj\\",
+      "outputPath": "C:\\Users\\USUARIO\\source\\repos\\INVEOS-PROJECT\\INVEOS\\INVEOS\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -10987,8 +10987,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\USUARIO\\source\\repos\\INVEOS\\InveosModel\\InveosModel.csproj": {
-              "projectPath": "C:\\Users\\USUARIO\\source\\repos\\INVEOS\\InveosModel\\InveosModel.csproj"
+            "C:\\Users\\USUARIO\\source\\repos\\INVEOS-PROJECT\\INVEOS\\InveosModel\\InveosModel.csproj": {
+              "projectPath": "C:\\Users\\USUARIO\\source\\repos\\INVEOS-PROJECT\\INVEOS\\InveosModel\\InveosModel.csproj"
             }
           }
         }

@@ -13,9 +13,10 @@ namespace INVEOS.Controllers
 
         [HttpGet]
         [Route("product/list")]
-        public ActionResult List()
+        public async Task<ActionResult> List()
         {
             //get all products
+            IEnumerable<Models.Product> products = await Functions.APIService.GetList<Models.Product>("Product");
             return View();
         }
 

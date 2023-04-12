@@ -29,14 +29,7 @@ namespace INVEOSAPI.Controllers
                                                     Name = c.Name,
                                                     Email = c.Email,
                                                     Phone = c.Phone,
-                                                    Address = new Models.Address
-                                                    {
-                                                        AddressId = c.Address.AddressId,
-                                                        Department = c.Address.Department,
-                                                        Municipality = c.Address.Municipality,
-                                                        Zone = c.Address.Zone,
-                                                        AddressDetail = c.Address.AddressDetail
-                                                    },
+                                                    Address = c.Address
                                                 }).ToListAsync();
 
 

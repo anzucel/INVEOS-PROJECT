@@ -36,15 +36,16 @@ namespace INVEOSAPI.Controllers
                                                     Status = c.Status,
                                                     SuplierId = c.SuplierId,
                                                     Image = c.Image,
-                                                    Category = new Category
-                                                    {
-                                                        Name = c.Category.Name,
-                                                        Code = c.Category.Code
-                                                    },
-                                                    Suplier = new Supplier
-                                                    {
-                                                        Name = c.Suplier.Name
-                                                    }
+                                                    Category = c.Category,
+                                                    Suplier = c.Suplier//new Category
+                                                    //{
+                                                    //    Name = c.Category.Name,
+                                                    //    Code = c.Category.Code
+                                                    //},
+                                                    //Suplier = new Supplier
+                                                    //{
+                                                    //    Name = c.Suplier.Name
+                                                    //}
                                                 }).ToListAsync();
 
 
@@ -64,5 +65,104 @@ namespace INVEOSAPI.Controllers
 
         }
 
+
+        [Route("Set")]
+        [HttpPost]
+        public async Task<IActionResult> Set(InveosModel.Product product)
+        {
+            try
+            {
+                Models.Product newProduct = new Models.Product
+                {
+                    CategoryId = product.CategoryId,
+                    Name = product.Name,
+                    Code = product.Code,
+                    Cost = product.Cost,
+                    Price = product.Price,
+                    Quantity = product.Quantity,
+                    Description = product.Description,
+                    Status = product.Status,
+                    SuplierId = product.SuplierId,
+                    Image = product.Image
+                };
+
+                _context.Products.Add(newProduct);
+                await _context.SaveChangesAsync();
+                return Ok();
+            }
+            catch (Exception)
+            {
+                return BadRequest();
+                throw;
+            }
+        }
+
+        [Route("GetByID/{id}")]
+        [HttpGet]
+        public async Task<ActionResult> GetByID(int id)
+        {
+            try
+            {
+                if (id == null || _context.Products == null)
+                {
+                    return NotFound();
+                }
+
+                var product = await _context.Products.FirstOrDefaultAsync(p => p.Idproduct == id);
+
+                if (product == null)
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    Models.Category category = await _context.Categories.FirstOrDefaultAsync(c => c.CategoryId == product.CategoryId);
+                    Models.Supplier supplier = await _context.Suppliers.FirstOrDefaultAsync(s => s.SupplierId == product.SuplierId);
+
+                    if (category == null || supplier == null)
+                    {
+                        return NotFound();
+                    }
+
+                    return Ok(product);
+                }
+            }
+            catch (Exception)
+            {
+                return BadRequest();
+                throw;
+            }
+        }
+
+        [Route("Edit/{id}")]
+        [HttpPut]
+        public async Task<ActionResult> Edit(int id, InveosModel.Product product)
+        {
+            try
+            {
+                Models.Product newProduct = new Models.Product
+                {
+                    Idproduct = product.Idproduct,
+                    CategoryId = product.CategoryId,
+                    Name = product.Name,
+                    Code = product.Code,
+                    Cost = product.Cost,
+                    Price = product.Price,
+                    Quantity = product.Quantity,
+                    Description = product.Description,
+                    Status = product.Status,
+                    SuplierId = product.SuplierId,
+                    Image = product.Image
+                };
+
+                _context.Update(newProduct);
+                await _context.SaveChangesAsync();
+                return Ok();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                return BadRequest();
+            }
+        }
     }
 }

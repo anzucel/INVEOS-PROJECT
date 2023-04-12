@@ -1,0 +1,57 @@
+﻿@model INVEOS.Models.Category
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<div class="content-page">
+    <div class="container-fluid add-form-list">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card">
+                    <div class="card-header d-flex justify-content-between">
+                        <div class="header-title">
+                            <h4 class="card-title">Categoría: @Model.Code</h4>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        @* <form action="page-list-category.html" data-toggle="validator">*@
+                            <div class="row">
+                                <input type="hidden" name="CategoryId" id="CategoryId" value="@Model.CategoryId">
+                              @*  <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label>Código *</label>
+                                        <input type="number" class="form-control" name="Code" id="Code" value="@Model.Code" required>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>*@
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label>Nombre de la categoría *</label>
+                                        <input type="text" class="form-control" name="Name" id="Name" value="@Model.Name" readonly>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label>Descripción *</label>
+                                        <textarea class="form-control" id="Description" name="Description" rows="4" readonly>@Model.Description</textarea>
+                                    </div>
+                                </div>
+                                @*<div class="col-md-12">
+                                    <div class="form-group">
+                                        <label>Imagen</label>
+                                        <input type="file" class="form-control image-file" name="Image" id="Image" accept="image/*">
+                                    </div>
+                                </div>*@
+                            </div>
+                            <button type="button" class="btn btn-primary mr-2" onclick="@("window.location.href='"+ @Url.Action("List", "Category") + "'")">Regresar</button>
+                            @*<button type="reset" class="btn btn-danger">Reset</button>*@
+                            @*</form>*@
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Page end  -->
+    </div>
+</div>

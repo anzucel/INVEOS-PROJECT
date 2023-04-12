@@ -29,8 +29,12 @@ namespace INVEOSAPI.Controllers
                                                     UserId = c.UserId,
                                                     Username = c.Username,
                                                     Status = c.Status,
+                                                    EmployeeId = c.EmployeeId,
                                                     Employee = new Models.Employee
                                                     {
+                                                        EmployeeId = c.EmployeeId,
+                                                        Role = c.Employee.Role,
+                                                        Address = c.Employee.Address,
                                                         FirstName = c.Employee.FirstName,
                                                         FirstLastname = c.Employee.FirstLastname,
                                                         Phone = c.Employee.Phone,

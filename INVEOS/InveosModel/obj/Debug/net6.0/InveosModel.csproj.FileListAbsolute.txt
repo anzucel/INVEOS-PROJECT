@@ -34,3 +34,15 @@ C:\Users\USUARIO\source\repos\INVEOS1\InveosModel\obj\Debug\net6.0\InveosModel.d
 C:\Users\USUARIO\source\repos\INVEOS1\InveosModel\obj\Debug\net6.0\refint\InveosModel.dll
 C:\Users\USUARIO\source\repos\INVEOS1\InveosModel\obj\Debug\net6.0\InveosModel.pdb
 C:\Users\USUARIO\source\repos\INVEOS1\InveosModel\obj\Debug\net6.0\ref\InveosModel.dll
+C:\Users\USUARIO\source\repos\INVEOS-PROJECT\INVEOS\InveosModel\bin\Debug\net6.0\InveosModel.deps.json
+C:\Users\USUARIO\source\repos\INVEOS-PROJECT\INVEOS\InveosModel\bin\Debug\net6.0\InveosModel.dll
+C:\Users\USUARIO\source\repos\INVEOS-PROJECT\INVEOS\InveosModel\bin\Debug\net6.0\InveosModel.pdb
+C:\Users\USUARIO\source\repos\INVEOS-PROJECT\INVEOS\InveosModel\obj\Debug\net6.0\InveosModel.csproj.AssemblyReference.cache
+C:\Users\USUARIO\source\repos\INVEOS-PROJECT\INVEOS\InveosModel\obj\Debug\net6.0\InveosModel.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\USUARIO\source\repos\INVEOS-PROJECT\INVEOS\InveosModel\obj\Debug\net6.0\InveosModel.AssemblyInfoInputs.cache
+C:\Users\USUARIO\source\repos\INVEOS-PROJECT\INVEOS\InveosModel\obj\Debug\net6.0\InveosModel.AssemblyInfo.cs
+C:\Users\USUARIO\source\repos\INVEOS-PROJECT\INVEOS\InveosModel\obj\Debug\net6.0\InveosModel.csproj.CoreCompileInputs.cache
+C:\Users\USUARIO\source\repos\INVEOS-PROJECT\INVEOS\InveosModel\obj\Debug\net6.0\InveosModel.dll
+C:\Users\USUARIO\source\repos\INVEOS-PROJECT\INVEOS\InveosModel\obj\Debug\net6.0\refint\InveosModel.dll
+C:\Users\USUARIO\source\repos\INVEOS-PROJECT\INVEOS\InveosModel\obj\Debug\net6.0\InveosModel.pdb
+C:\Users\USUARIO\source\repos\INVEOS-PROJECT\INVEOS\InveosModel\obj\Debug\net6.0\ref\InveosModel.dll

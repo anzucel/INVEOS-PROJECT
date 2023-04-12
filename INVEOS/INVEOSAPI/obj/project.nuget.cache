@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "XR2CUEqebknx0l4OSa8xKz2u5bGe0oxdlZFL8fay1hZ8OuGy7L+va6hkHC0Aglb+xkv5aOWNl9Y2SkHhRVzbug==",
+  "dgSpecHash": "mSnjEoXg2ww8bjb3lnaXKySI/0Hw3SUBdMiZ+ne3W/ZyMelmZYu2XihRZeX9972DMo5kJXpwB+3B7eZESc9YdQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\USUARIO\\source\\repos\\INVEOS\\INVEOSAPI\\INVEOSAPI.csproj",
+  "projectFilePath": "C:\\Users\\USUARIO\\source\\repos\\INVEOS-PROJECT\\INVEOS\\INVEOSAPI\\INVEOSAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\USUARIO\\.nuget\\packages\\google.protobuf\\3.21.9\\google.protobuf.3.21.9.nupkg.sha512",
     "C:\\Users\\USUARIO\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",

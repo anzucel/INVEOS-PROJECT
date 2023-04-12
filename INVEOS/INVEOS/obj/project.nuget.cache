@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "25v6QHEnXk71jsHae/Ik8D58LYNZj7m915nBqHoQ91Yue8kKbZjs+hV7snfn0izhTj7aCFu6h0bj554jHYTksg==",
+  "dgSpecHash": "y/kgV7Vlf1P2U8atAtxlCXxU1SPNSCfVx6c/KYtw85LpBcwYn6ohuN2KD1ncKKh1MALKSYHgEM8QwCqWh0vTdw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\USUARIO\\source\\repos\\INVEOS\\INVEOS\\INVEOS.csproj",
+  "projectFilePath": "C:\\Users\\USUARIO\\source\\repos\\INVEOS-PROJECT\\INVEOS\\INVEOS\\INVEOS.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\USUARIO\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\USUARIO\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

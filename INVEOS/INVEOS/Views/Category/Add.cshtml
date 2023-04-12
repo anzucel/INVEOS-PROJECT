@@ -9,26 +9,29 @@
                 <div class="card">
                     <div class="card-header d-flex justify-content-between">
                         <div class="header-title">
-                            <h4 class="card-title">Add category</h4>
+                            <h4 class="card-title">Agregar categoría</h4>
                         </div>
                     </div>
                     <div class="card-body">
-                        <form action="page-list-category.html" data-toggle="validator">
+                       @* <form action="page-list-category.html" data-toggle="validator">*@
+                        @using (Html.BeginForm("Create", "Category", FormMethod.Post))
+                        {
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <label>Image</label>
-                                        <input type="file" class="form-control image-file" name="pic" accept="image/*">
-                                    </div>
-                                </div>
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <label>Product Name *</label>
-                                        <input type="text" class="form-control" placeholder="Enter Product Name" required>
+                                        <label>Código *</label>
+                                        <input type="number" class="form-control" name="Code" id="Code" required>
                                         <div class="help-block with-errors"></div>
                                     </div>
                                 </div>
                                 <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label>Nombre de la categoría *</label>
+                                        <input type="text" class="form-control" name="Name" id="Name" required>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                              @*  <div class="col-md-12">
                                     <div class="form-group">
                                         <label>Category *</label>
                                         <select name="type" class="selectpicker form-control" data-style="py-0">
@@ -41,18 +44,24 @@
                                             <option>Jewellery</option>
                                         </select>
                                     </div>
+                                </div>*@
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label>Descripción *</label>
+                                        <textarea class="form-control" id="Description" name="Description" rows="4"></textarea>
+                                    </div>
                                 </div>
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <label>Code *</label>
-                                        <input type="text" class="form-control" placeholder="Enter Code" required>
-                                        <div class="help-block with-errors"></div>
+                                        <label>Imagen</label>
+                                        <input type="file" class="form-control image-file" name="Image" id="Image" accept="image/*">
                                     </div>
                                 </div>
                             </div>
-                            <button type="submit" class="btn btn-primary mr-2">Add category</button>
+                            <button type="submit" class="btn btn-primary mr-2">Agregar categoria</button>
                             <button type="reset" class="btn btn-danger">Reset</button>
-                        </form>
+                        @*</form>*@
+                        }
                     </div>
                 </div>
             </div>

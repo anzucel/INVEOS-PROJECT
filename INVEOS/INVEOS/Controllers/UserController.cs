@@ -45,9 +45,11 @@ namespace INVEOS.Controllers
         }
 
         [HttpGet]
-        public ActionResult List()
+        [Route("User/list")]
+        public async Task<ActionResult> List()
         {
-            return View();
+            IEnumerable<Models.User> users = await Functions.APIService.GetList<Models.User>("User");
+            return View(users);
         }
 
         // GET: UserController/Details/5
