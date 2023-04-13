@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="../assets/vendor/line-awesome/dist/line-awesome/css/line-awesome.min.css">
     <link rel="stylesheet" href="../assets/vendor/remixicon/fonts/remixicon.css">
     <title>@ViewData["Title"] - INVEOS</title>
+    @RenderSection("scripts", required: false)
 
 </head>
 <body>
@@ -946,6 +947,7 @@
             </div>
         </div>
     </footer>
+
     <!-- Backend Bundle JavaScript -->
     <script src="../assets/js/backend-bundle.min.js"></script>
 
@@ -960,5 +962,8 @@
 
     <!-- app JavaScript -->
     <script src="../assets/js/app.js"></script>
+    
+    <!---->
+    <script src="~/js/sweetalert2.all.min.js"></script>
 </body>
 </html>

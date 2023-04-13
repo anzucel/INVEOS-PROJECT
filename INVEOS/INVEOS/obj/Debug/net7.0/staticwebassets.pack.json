@@ -17469,6 +17469,10 @@
       "PackagePath": "staticwebassets\\js\\site.js"
     },
     {
+      "Id": "C:\\Users\\USUARIO\\source\\repos\\INVEOS-PROJECT\\INVEOS\\INVEOS\\wwwroot\\js\\sweetalert2.all.min.js",
+      "PackagePath": "staticwebassets\\js\\sweetalert2.all.min.js"
+    },
+    {
       "Id": "C:\\Users\\USUARIO\\source\\repos\\INVEOS-PROJECT\\INVEOS\\INVEOS\\wwwroot\\lib\\bootstrap\\LICENSE",
       "PackagePath": "staticwebassets\\lib\\bootstrap"
     },

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "BzdY34ZZdVbBbT1oMLv3kxT41NYCL6NnT7Xybd0B70E=",
+  "Hash": "WhwB0GQYP29nRFOj80Ahq3/iAmowP0wvzNfE3Vi8VEo=",
   "Source": "INVEOS",
   "BasePath": "_content/INVEOS",
   "Mode": "Default",
@@ -74271,6 +74271,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\site.js"
+    },
+    {
+      "Identity": "C:\\Users\\USUARIO\\source\\repos\\INVEOS-PROJECT\\INVEOS\\INVEOS\\wwwroot\\js\\sweetalert2.all.min.js",
+      "SourceId": "INVEOS",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\USUARIO\\source\\repos\\INVEOS-PROJECT\\INVEOS\\INVEOS\\wwwroot\\",
+      "BasePath": "_content/INVEOS",
+      "RelativePath": "js/sweetalert2.all.min.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\sweetalert2.all.min.js"
     },
     {
       "Identity": "C:\\Users\\USUARIO\\source\\repos\\INVEOS-PROJECT\\INVEOS\\INVEOS\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
