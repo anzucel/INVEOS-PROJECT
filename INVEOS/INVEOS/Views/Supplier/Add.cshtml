@@ -1,6 +1,12 @@
 ﻿@*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
+@if (TempData["error"] != null)
+{
+    <script>
+        window.onload = errorAlert('@TempData["error"]');
+    </script>
+}
 
 <div class="content-page">
     <div class="container-fluid add-form-list">
@@ -9,71 +15,80 @@
                 <div class="card">
                     <div class="card-header d-flex justify-content-between">
                         <div class="header-title">
-                            <h4 class="card-title">Add Supplier</h4>
+                            <h4 class="card-title">Agregar Proveedor</h4>
                         </div>
                     </div>
                     <div class="card-body">
-                        <form action="page-list-suppliers.html" data-toggle="validator">
+                        @*<form action="page-list-suppliers.html" data-toggle="validator">*@
+                        @using (Html.BeginForm("Create", "Supplier", FormMethod.Post))
+                        {
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>Name *</label>
-                                        <input type="text" class="form-control" placeholder="Enter Name" required>
+                                        <label>Nombre *</label>
+                                        <input type="text" class="form-control" name="Name" id="Name" required>
                                         <div class="help-block with-errors"></div>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>Email *</label>
-                                        <input type="text" class="form-control" placeholder="Enter Email" required>
+                                        <label>Correo *</label>
+                                        <input type="email" class="form-control" name="Email" id="Email" required>
                                         <div class="help-block with-errors"></div>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>Phone Number *</label>
-                                        <input type="text" class="form-control" placeholder="Enter Phone Number" required>
+                                        <label>Teléfono *</label>
+                                        <input type="number" class="form-control" name="Phone" id="Phone" required>
                                         <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label>Departamento *</label>
+                                        <select name="Address.Department" id="Address.Department" class="selectpicker form-control" data-style="py-0">
+                                            <option>Guatemala</option>
+                                            <option>San Marcos</option>
+                                            <option>Retalhuleu</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label>Municipio *</label>
+                                        <select name="Address.Municipality" id="Address.Municipality" class="selectpicker form-control" data-style="py-0">
+                                            <option>Guatemala</option>
+                                            <option>San Marcos</option>
+                                            <option>Retalhuleu</option>
+                                        </select>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>GST Number *</label>
-                                        <input type="text" class="form-control" placeholder="Enter GST Number" required>
+                                        <label>Zona *</label>
+                                        <input type="number" name="Address.Zone" id="Address.Zone" class="form-control" required>
                                         <div class="help-block with-errors"></div>
                                     </div>
                                 </div>
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <label>Address</label>
-                                        <textarea class="form-control" rows="4"></textarea>
-                                    </div>
-                                </div>
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <label>City *</label>
-                                        <input type="text" class="form-control" placeholder="Enter City" required>
-                                        <div class="help-block with-errors"></div>
-                                    </div>
-                                </div>
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <label>State *</label>
-                                        <input type="text" class="form-control" placeholder="Enter State" required>
-                                        <div class="help-block with-errors"></div>
-                                    </div>
-                                </div>
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <label>Country *</label>
-                                        <input type="text" class="form-control" placeholder="Enter Country" required>
-                                        <div class="help-block with-errors"></div>
+                                        <label>Detalle de la dirección *</label>
+                                        <textarea class="form-control" rows="2" id="Address.AddressDetail" name="Address.AddressDetail" required></textarea>
                                     </div>
                                 </div>
                             </div>
-                            <button type="submit" class="btn btn-primary mr-2">Add Supplier</button>
-                            <button type="reset" class="btn btn-danger">Reset</button>
-                        </form>
+                            <button type="submit" class="btn btn-primary mr-2">Agregar</button>
+                            <button type="reset" class="btn btn-danger">Reestablecer</button>
+                        @*</form>*@
+                        }
+
+                        @if (ViewBag.JavaScriptFunction != null)
+                        {
+                            <script type="text/javascript">
+                                @Html.Raw(ViewBag.JavaScriptFunction)
+                            </script>
+                        }
                     </div>
                 </div>
             </div>
@@ -81,3 +96,33 @@
         <!-- Page end  -->
     </div>
 </div>
+
+@section scripts{
+    <script type="text/javascript">
+        function successfulAlert() {
+            Swal.fire({
+                title: '¡Agregado!',
+                text: "Se ha agregado el proveedor exitosamente",
+                icon: 'success',
+                showCancelButton: false,
+                //confirmButtonColor: '#3085d6',
+                confirmButtonText: 'OK'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    window.location = "/Supplier/List"
+                }
+                return false;
+            });
+        };
+    </script>
+
+    <script type="text/javascript">
+        function errorAlert(message) {
+            Swal.fire(
+                'Error',
+                message,
+                'error'
+            )
+        };
+    </script>
+}

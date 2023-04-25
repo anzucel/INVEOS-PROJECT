@@ -40,10 +40,9 @@ namespace INVEOSAPI.Controllers
 
                 return Ok(null);
             }
-            catch (Exception)
+            catch (Exception e)
             {
-
-                return BadRequest();
+                return BadRequest(e.Message);
                 throw;
             }
 
@@ -123,9 +122,9 @@ namespace INVEOSAPI.Controllers
                 await _context.SaveChangesAsync();
                 return Ok();
             }
-            catch (DbUpdateConcurrencyException)
+            catch (DbUpdateConcurrencyException e)
             {
-                return BadRequest();
+                return BadRequest(e.Data);
             }
         }
 

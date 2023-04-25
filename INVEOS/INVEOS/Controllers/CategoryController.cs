@@ -15,8 +15,18 @@ namespace INVEOS.Controllers
         [HttpGet]
         public async Task<ActionResult> List()
         {
-            IEnumerable<Models.Category> categories = await Functions.APIService.GetList<Models.Category>("Category");
-            return View(categories);
+            try
+            {
+                IEnumerable<Models.Category> categories = await Functions.APIService.GetList<Models.Category>("Category");
+                return View(categories);
+            }
+            catch (Exception e)
+            {
+                TempData["error"] = e.Message;
+                return View();
+                //return RedirectToAction("Dashboard", "Graphics");
+                throw;
+            }
         }
 
         [HttpGet]
@@ -28,14 +38,26 @@ namespace INVEOS.Controllers
         [HttpPost]
         public async Task<IActionResult> Create([Bind("Id,Name,Code,Description,Image")] INVEOS.Models.Category category)
         {
-            if (ModelState.IsValid)
+            try
             {
-                await Functions.APIService.Set(category, "Category");
-            }
+                if (ModelState.IsValid)
+                {
+                    await Functions.APIService.Set(category, "Category");
+                    //TempData["categoryCreated"] = "Category created";
+                    ViewBag.JavaScriptFunction = string.Format("successfulAlert()");
+                }
 
-            return RedirectToAction(nameof(List));
+                return View("Add");
+            }
+            catch (Exception e)
+            {
+                TempData["error"] = e.Message;
+                return View("Add");
+                throw;
+            }
         }
 
+        [HttpGet]
         [Route("Category/Delete/{id:int}")]
         public async Task<IActionResult> Delete(int id)
         {
@@ -60,12 +82,24 @@ namespace INVEOS.Controllers
         [HttpPost]
         public async Task<IActionResult> Edit(int id, [Bind("CategoryId,Name,Code,Description,Image")] Models.Category category)
         {
-            if (ModelState.IsValid)
+            try
             {
-                await Functions.APIService.Edit<Models.Category>(category, category.CategoryId, "Category");
-                return RedirectToAction(nameof(List));
+                if (ModelState.IsValid)
+                {
+                    await Functions.APIService.Edit<Models.Category>(category, category.CategoryId, "Category");
+                    //ViewBag.JavaScriptFunctionn = string.Format("successfulEditAlert()");
+                    TempData["categoryEdited"] = "Category edited";
+                    //return RedirectToAction(nameof(List));
+                }
+
+                return Redirect("Edit?id=" + category.CategoryId);
             }
-            return View(category);
+            catch (Exception e)
+            {
+                TempData["error"] = "Ha ocurrido un error al editar la categoría, intente nuevamente";
+                return Redirect("Edit?id=" + category.CategoryId);
+                throw;
+            }
         }
 
         [HttpGet]

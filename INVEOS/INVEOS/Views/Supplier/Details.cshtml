@@ -1,0 +1,92 @@
+﻿@model INVEOS.Models.Supplier
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<div class="content-page">
+    <div class="container-fluid add-form-list">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card">
+                    <div class="card-header d-flex justify-content-between">
+                        <div class="header-title">
+                            <h4 class="card-title">Proveedor: @Model.Name</h4>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        @* <form action="page-list-category.html" data-toggle="validator">*@
+                        <div class="row">
+                            <input type="hidden" name="CategoryId" id="CategoryId" value="@Model.SupplierId">
+                            @*  <div class="col-md-12">
+                            <div class="form-group">
+                            <label>Código *</label>
+                            <input type="number" class="form-control" name="Code" id="Code" value="@Model.Code" required>
+                            <div class="help-block with-errors"></div>
+                            </div>
+                            </div>*@
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label>Correo *</label>
+                                    <input class="form-control" id="Email" name="Email" type="email" value="@Model.Email" readonly>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Teléfono *</label>
+                                    <input type="number" class="form-control" name="Phone" id="Phone" readonly value="@Model.Phone">
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label>Departamento *</label>
+                                    <select name="Address.Department" id="Address.Department" class="selectpicker form-control" data-style="py-0" disabled>
+                                        <option>Guatemala</option>
+                                        <option>San Marcos</option>
+                                        <option>Retalhuleu</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label>Municipio *</label>
+                                    <select name="Address.Municipality" id="Address.Municipality" class="selectpicker form-control" data-style="py-0" disabled>
+                                        <option>Guatemala</option>
+                                        <option>San Marcos</option>
+                                        <option>Retalhuleu</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Zona *</label>
+                                    <input type="number" name="Address.Zone" id="Address.Zone" class="form-control" disabled value="@Model.Address.Zone">
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label>Detalle de la dirección *</label>
+                                    <textarea class="form-control" rows="2" id="Address.AddressDetail" name="Address.AddressDetail" disabled>
+                                        @Model.Address.AddressDetail
+                                    </textarea>
+                                </div>
+                            </div>
+                            @*<div class="col-md-12">
+                            <div class="form-group">
+                            <label>Imagen</label>
+                            <input type="file" class="form-control image-file" name="Image" id="Image" accept="image/*">
+                            </div>
+                            </div>*@
+                        </div>
+                        <button type="button" class="btn btn-primary mr-2" onclick="@("window.location.href='"+ @Url.Action("List", "Supplier") + "'")">Regresar</button>
+                        @*<button type="reset" class="btn btn-danger">Reset</button>*@
+                        @*</form>*@
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Page end  -->
+    </div>
+</div>

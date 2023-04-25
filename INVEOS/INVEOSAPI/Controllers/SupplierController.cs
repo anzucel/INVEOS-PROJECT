@@ -170,8 +170,8 @@ namespace INVEOSAPI.Controllers
                 }
 
                 var address = await _context.Addresses.FindAsync(supplier.AddressId);
-                _context.Addresses.Remove(address);
                 _context.Suppliers.Remove(supplier);
+                _context.Addresses.Remove(address);
                 await _context.SaveChangesAsync();
                 return Ok();
             }

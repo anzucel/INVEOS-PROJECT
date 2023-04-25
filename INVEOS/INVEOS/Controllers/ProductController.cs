@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace INVEOS.Controllers
 {
@@ -23,10 +24,40 @@ namespace INVEOS.Controllers
 
         [HttpGet]
         [Route("product/add")]
-        public ActionResult Add()
+        public async Task<ActionResult> Add()
         {
             //get all products
+            IEnumerable<Models.Category> categories = await Functions.APIService.GetList<Models.Category>("Category");
+
+            ViewBag.Category = categories.Select(c => new SelectListItem()
+            {
+                Value = c.CategoryId.ToString(),
+                Text = c.Name,
+            }).ToList();
+
             return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Create([Bind("IDProduct,CategoryID,Name,Code,Cost,Price,Quantity,Description,Status,SuplierID,Image")] INVEOS.Models.Product product)
+        {
+            try
+            {
+                if (ModelState.IsValid)
+                {
+                    await Functions.APIService.Set(product, "Product");
+                    //TempData["categoryCreated"] = "Category created";
+                    ViewBag.JavaScriptFunction = string.Format("successfulAlert()");
+                }
+
+                return View("Add");
+            }
+            catch (Exception e)
+            {
+                TempData["error"] = e.Message;
+                return View("Add");
+                throw;
+            }
         }
 
         // GET: ProductController/Details/5

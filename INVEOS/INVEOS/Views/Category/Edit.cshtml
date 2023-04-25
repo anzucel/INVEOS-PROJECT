@@ -4,6 +4,20 @@
     ViewBag.Title = "Edit";
 }
 
+@if (TempData["categoryEdited"] != null)
+{
+    <script>
+        window.onload = successfulEditAlert();
+    </script>
+}
+
+@if (TempData["error"] != null)
+{
+    <script>
+        window.onload = errorAlert('@TempData["error"]');
+    </script>
+}
+
 <link rel="shortcut icon" href="../assets/images/favicon.ico" />
 <link rel="stylesheet" href="../assets/css/backend-plugin.min.css">
 <link rel="stylesheet" href="../assets/css/backend.css?v=1.0.0">
@@ -55,9 +69,16 @@
                                 </div>
                             </div>
                             <button type="submit" class="btn btn-primary mr-2">Guardar Cambios</button>
-                            <button type="reset" class="btn btn-danger">Reset</button>
+                            <button type="button" class="btn btn-danger" onclick="@("window.location.href='"+ @Url.Action("List", "Category") + "'")">Regresar</button>
                             @*</form>*@
                         }
+
+                        @*@if (ViewBag.JavaScriptFunctionn == null)
+                        {
+                            <script type="text/javascript">
+                                @Html.Raw(ViewBag.JavaScriptFunctionn)
+                            </script>
+                        }*@
                     </div>
                 </div>
             </div>
@@ -65,3 +86,33 @@
         <!-- Page end  -->
     </div>
 </div>
+
+@section scripts{
+    <script type="text/javascript">
+        function successfulEditAlert() {
+            Swal.fire({
+                title: '¡Guardado correctamente!',
+                //text: "La categoría ha sido creada exitosamente",
+                icon: 'success',
+                showCancelButton: false,
+                //confirmButtonColor: '#3085d6',
+                confirmButtonText: 'OK'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    window.location = "/Category/List"
+                }
+                return false;
+            });
+        };
+    </script>
+
+    <script type="text/javascript">
+        function errorAlert(message) {
+            Swal.fire(
+                'Error',
+                 message,
+                'error'
+            )
+        };
+    </script>
+}

@@ -13,16 +13,18 @@
                         </div>
                     </div>
                     <div class="card-body">
-                        <form action="page-list-product.html" data-toggle="validator">
+                        @*<form action="page-list-product.html" data-toggle="validator">*@
+                        @using (Html.BeginForm("Create", "Category", FormMethod.Post))
+                        {
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <label>Categoría *</label>
                                         <select name="type" class="selectpicker form-control" data-style="py-0">
-                                            <option>Joyería</option>
-                                            <option>Maquillaje</option>
-                                            <option>Limpieza</option>
-                                            <option>Ropa</option>
+                                            @foreach (var item in ViewBag.Category)
+                                            {
+                                                <option value="@item.Value">@item.Text</option>
+                                            }
                                         </select>
                                     </div> 
                                 </div>  
@@ -123,7 +125,8 @@
                             </div>                            
                             <button type="submit" class="btn btn-primary mr-2">Agregar</button>
                             <button type="reset" class="btn btn-danger">Deshacer</button>
-                        </form>
+                        }
+                        @*</form>*@
                     </div>
                 </div>
             </div>
